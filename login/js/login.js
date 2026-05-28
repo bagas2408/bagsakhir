@@ -30,7 +30,8 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
             // 3. Beri jeda 1,5 detik sebelum pindah halaman agar animasinya selesai berjalan
             setTimeout(() => {
                 // Pastikan nama file beranda di luar folder login adalah index.html
-                window.location.href = "../index.html"; 
+                // Ganti baris nomor 29 dengan baris di bawah ini:
+             window.location.href = "https://bagas2408.github.io/bagsakhir/index.html"; 
             }, 1500);
 
         } else {
