@@ -1,36 +1,40 @@
 document.getElementById("loginForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
-    const username = document.getElementById("username").value.trim();
+    const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
+    const errorElement = document.getElementById("passwordError"); // tempat munculin teks eror jika salah
 
-    const res = await fetch("https://herisusanta.my.id/javalogin/api/auth.php", {
-        method: "POST",
-        headers: {
-            "Content-Type": "application/x-www-form-urlencoded"
-        },
-        body: `action=login&username=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
-    });
+    try {
+        // Mengirim data login ke API server herisusanta
+        const res = await fetch("https://herisusanta.my.id/javalogin/api/auth.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `action=login&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+        });
 
-    const data = await res.json();
+        const data = await res.json();
 
-    if (data.status === "success") {
-        // simpan username
-            localStorage.setItem("username", data.username);
-            window.location.href = "../index.html";
-         
-    // } else {
-    //     document.getElementById("message").innerText = "Username / Password salah";alert("Login gagal");
-    // }
-    
-    } else {
-    const alertBox = document.getElementById("alertBox");
-    alertBox.innerText = "Username atau Password salah, silahkan coba lagi";
-    alertBox.style.display = "block";
+        if (data.status === "success") {
+            // JIKA SUKSES LOGIN:
+            // 1. Simpan nama/username dari server ke browser supaya bisa dipanggil "Halo, nama"
+            localStorage.setItem('username', data.user.username || 'User');
 
-    setTimeout(() => {
-        alertBox.style.display = "none";
-    }, 3000);
-} 
-   
+            // 2. LANGSUNG MASUK KE WEB UTAMA (Landing Page)
+            // "../index.html" artinya keluar dari folder login dan buka index.html utama yang di luar
+            window.location.href = "../index.html"; 
+        } else {
+            // Jika email/password salah, munculkan pesan eror dari server
+            if (errorElement) {
+                errorElement.style.color = "#ff4a4a";
+                errorElement.innerText = data.message || "Email atau Password salah!";
+            } else {
+                alert(data.message || "Email atau Password salah!");
+            }
+        }
+    } catch (error) {
+        alert("Gagal terhubung ke server login.");
+    }
 });
