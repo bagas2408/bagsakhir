@@ -1,7 +1,7 @@
 document.getElementById("loginForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
-    const email = document.getElementById("email").value.trim();
+    const username = document.getElementById("username").value.trim();
     const password = document.getElementById("password").value.trim();
     const errorElement = document.getElementById("passwordError"); 
     const successMessage = document.getElementById("successMessage"); // Mengambil elemen sukses bawaan HTML
@@ -12,7 +12,7 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
             headers: {
                 "Content-Type": "application/x-www-form-urlencoded"
             },
-            body: `action=login&email=${encodeURIComponent(email)}&password=${encodeURIComponent(password)}`
+            body: `action=login&email=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
         });
 
         const data = await res.json();
@@ -37,9 +37,9 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
         } else {
             if (errorElement) {
                 errorElement.style.color = "#ff4a4a";
-                errorElement.innerText = data.message || "Email atau Password salah!";
+                errorElement.innerText = data.message || "Username atau Password salah!";
             } else {
-                alert(data.message || "Email atau Password salah!");
+                alert(data.message || "Username atau Password salah!");
             }
         }
     } catch (error) {
