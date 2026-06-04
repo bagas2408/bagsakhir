@@ -1,5 +1,32 @@
 // Login Form 2 - Neon Minimalist Style JavaScript
 // This file extends form-utils.js with form-specific functionality
+const FormUtils = {
+    validateEmail(email) {
+        return {
+            isValid: email.trim() !== "",
+            message: "Email wajib diisi"
+        };
+    },
+
+    validatePassword(password) {
+        return {
+            isValid: password.length >= 3,
+            message: "Password minimal 3 karakter"
+        };
+    },
+
+    async simulateLogin(email, password) {
+        return new Promise((resolve) => {
+            setTimeout(resolve, 1000);
+        });
+    },
+
+    showNotification(message) {
+        alert(message);
+    },
+
+    addSharedAnimations() {}
+};
 
 class LoginForm2 {
     constructor() {
@@ -400,12 +427,16 @@ class LoginForm2 {
         }, 300);
     }
     
+    // simulateRedirect() {
+    //     // For demo, reset the form after 2 seconds
+    //     setTimeout(() => {
+    //         this.resetForm();
+    //     }, 2000);
+    // }
+
     simulateRedirect() {
-        // For demo, reset the form after 2 seconds
-        setTimeout(() => {
-            this.resetForm();
-        }, 2000);
-    }
+    window.location.href = "dashboard.html";
+}
     
     showLoginError(message) {
         FormUtils.showNotification(message || 'Login failed. Please try again.', 'error', this.form);
