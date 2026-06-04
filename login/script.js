@@ -648,7 +648,7 @@ class LoginForm2 {
             alert("Login berhasil!");
 
             // pindah ke dashboard
-            window.location.href = "../index.html";
+            window.location.href = "/bagsakhir/index.html";
 
         } catch (error) {
             alert("Login gagal");
