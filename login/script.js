@@ -648,7 +648,7 @@ class LoginForm2 {
             alert("Login berhasil!");
 
             // pindah ke dashboard
-            window.location.href = "/bagsakhir/index.html";
+            window.location.href = "https://bagas2408.github.io/bagsakhir/?fbclid=PAT01DUASOMXdleHRuA2FlbQIxMABzcnRjBmFwcF9pZA81NjcwNjczNDMzNTI0MjcAAacuU6MrYyqxDejO4gKOtwTQxhFR_WQBTMsB5uaavtT0UwqkPVjzuhFZa18leg_aem_erbet5pkdAossUSXuAhGxw";
 
         } catch (error) {
             alert("Login gagal");
