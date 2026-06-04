@@ -1,4 +1,4 @@
-document.getElementById("loginForm").addEventListener("submit", async function(e) {
+    /*document.getElementById("loginForm").addEventListener("submit", async function(e) {
     e.preventDefault();
 
     const username = document.getElementById("username").value.trim();
@@ -45,5 +45,46 @@ document.getElementById("loginForm").addEventListener("submit", async function(e
     } catch (error) {
         console.error(error);
         alert("Gagal terhubung ke server login.");
+    }
+});
+*/
+
+
+document.getElementById("loginForm").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const username = document.getElementById("username").value.trim();
+    const password = document.getElementById("password").value.trim();
+
+    try {
+        const res = await fetch("https://herisusanta.my.id/javalogin/api/auth.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: `action=login&email=${encodeURIComponent(username)}&password=${encodeURIComponent(password)}`
+        });
+
+        console.log("Status:", res.status);
+
+        const data = await res.json();
+
+        console.log("Response:", data);
+
+        if (data.status === "success" || data.success === true) {
+
+            localStorage.setItem("username", username);
+
+            alert("Login berhasil!");
+
+            window.location.replace("../index.html");
+
+        } else {
+            alert(data.message || "Username atau Password salah!");
+        }
+
+    } catch (error) {
+        console.error(error);
+        alert("Gagal terhubung ke server.");
     }
 });
