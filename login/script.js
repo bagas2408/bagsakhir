@@ -674,22 +674,24 @@
 
 class LoginForm2 {
     constructor() {
-        this.form = document.getElementById('loginForm');
-        this.emailInput = document.getElementById('email');
-        this.passwordInput = document.getElementById('password');
+        this.form = document.getElementById("loginForm");
+        this.emailInput = document.getElementById("email");
+        this.passwordInput = document.getElementById("password");
 
         this.init();
     }
 
     init() {
-        this.form.addEventListener('submit', (e) => {
+        this.form.addEventListener("submit", (e) => {
             e.preventDefault();
             this.login();
         });
     }
 
     showError(element, message) {
-        const errorElement = document.getElementById(element.id + "Error");
+        const errorElement = document.getElementById(
+            element.id + "Error"
+        );
 
         if (errorElement) {
             errorElement.textContent = message;
@@ -699,7 +701,9 @@ class LoginForm2 {
     }
 
     clearError(element) {
-        const errorElement = document.getElementById(element.id + "Error");
+        const errorElement = document.getElementById(
+            element.id + "Error"
+        );
 
         if (errorElement) {
             errorElement.textContent = "";
@@ -733,15 +737,16 @@ class LoginForm2 {
     async login() {
         if (!this.validate()) return;
 
-        const btn = document.querySelector('.login-btn');
-        const btnText = btn.querySelector('.btn-text');
+        const btn = document.querySelector(".login-btn");
+        const btnText = document.querySelector(".btn-text");
 
         btn.disabled = true;
         btnText.textContent = "Loading...";
 
         try {
-            // Simulasi login
-            await new Promise(resolve => setTimeout(resolve, 1000));
+            await new Promise((resolve) =>
+                setTimeout(resolve, 1000)
+            );
 
             // Simpan email ke localStorage
             localStorage.setItem(
@@ -751,12 +756,13 @@ class LoginForm2 {
 
             alert("Login berhasil!");
 
-            // Redirect ke dashboard
-            window.location.href = "https://bagas2408.github.io/bagaswebbaru/";
+            // Ganti dengan URL dashboard kamu
+            window.location.href =
+                "https://bagas2408.github.io/bagaswebbaru/";
 
         } catch (error) {
             console.error(error);
-            alert("Login gagal");
+            alert("Login gagal!");
         } finally {
             btn.disabled = false;
             btnText.textContent = "Sign In";
@@ -764,6 +770,6 @@ class LoginForm2 {
     }
 }
 
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
     new LoginForm2();
 });
