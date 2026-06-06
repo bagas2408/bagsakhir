@@ -572,6 +572,106 @@
 //         }
 //     }
 
+// class LoginForm2 {
+//     constructor() {
+//         this.form = document.getElementById('loginForm');
+//         this.emailInput = document.getElementById('email');
+//         this.passwordInput = document.getElementById('password');
+
+//         this.init();
+//     }
+
+//     init() {
+//         this.form.addEventListener('submit', (e) => {
+//             e.preventDefault();
+//             this.login();
+//         });
+//     }
+
+//     showError(element, message) {
+//         const errorId = element.id + "Error";
+//         const errorElement = document.getElementById(errorId);
+
+//         if (errorElement) {
+//             errorElement.textContent = message;
+//         }
+
+//         element.style.borderColor = "red";
+//     }
+
+//     clearError(element) {
+//         const errorId = element.id + "Error";
+//         const errorElement = document.getElementById(errorId);
+
+//         if (errorElement) {
+//             errorElement.textContent = "";
+//         }
+
+//         element.style.borderColor = "";
+//     }
+
+//     validate() {
+//         let valid = true;
+
+//         const email = this.emailInput.value.trim();
+//         const password = this.passwordInput.value.trim();
+
+//         this.clearError(this.emailInput);
+//         this.clearError(this.passwordInput);
+
+//         if (email === "") {
+//             this.showError(this.emailInput, "Email wajib diisi");
+//             valid = false;
+//         }
+
+//         if (password === "") {
+//             this.showError(this.passwordInput, "Password wajib diisi");
+//             valid = false;
+//         }
+
+//         return valid;
+//     }
+
+//     async login() {
+//         if (!this.validate()) return;
+
+//         const btn = document.querySelector('.login-btn');
+//         const btnText = btn.querySelector('.btn-text');
+
+//         btn.disabled = true;
+//         btnText.textContent = "Loading...";
+
+//         try {
+//             // simulasi proses login
+//             await new Promise(resolve => setTimeout(resolve, 1000));
+
+//             alert("Login berhasil!");
+
+//             // pindah ke dashboard
+//             window.location.href = "https://bagas2408.github.io/bagaswebbaru/";
+
+//         } catch (error) {
+//             alert("Login gagal");
+//         } finally {
+//             btn.disabled = false;
+//             btnText.textContent = "Sign In";
+//         }
+//     }
+// }
+// const username = document.getElementById("username").value;
+
+// localStorage.setItem("username", username);
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     new LoginForm2();
+
+
+// });
+
+// });
+
+
+
 class LoginForm2 {
     constructor() {
         this.form = document.getElementById('loginForm');
@@ -589,8 +689,7 @@ class LoginForm2 {
     }
 
     showError(element, message) {
-        const errorId = element.id + "Error";
-        const errorElement = document.getElementById(errorId);
+        const errorElement = document.getElementById(element.id + "Error");
 
         if (errorElement) {
             errorElement.textContent = message;
@@ -600,8 +699,7 @@ class LoginForm2 {
     }
 
     clearError(element) {
-        const errorId = element.id + "Error";
-        const errorElement = document.getElementById(errorId);
+        const errorElement = document.getElementById(element.id + "Error");
 
         if (errorElement) {
             errorElement.textContent = "";
@@ -619,12 +717,12 @@ class LoginForm2 {
         this.clearError(this.emailInput);
         this.clearError(this.passwordInput);
 
-        if (email === "") {
+        if (!email) {
             this.showError(this.emailInput, "Email wajib diisi");
             valid = false;
         }
 
-        if (password === "") {
+        if (!password) {
             this.showError(this.passwordInput, "Password wajib diisi");
             valid = false;
         }
@@ -642,15 +740,22 @@ class LoginForm2 {
         btnText.textContent = "Loading...";
 
         try {
-            // simulasi proses login
+            // Simulasi login
             await new Promise(resolve => setTimeout(resolve, 1000));
+
+            // Simpan email ke localStorage
+            localStorage.setItem(
+                "username",
+                this.emailInput.value.trim()
+            );
 
             alert("Login berhasil!");
 
-            // pindah ke dashboard
+            // Redirect ke dashboard
             window.location.href = "https://bagas2408.github.io/bagaswebbaru/";
 
         } catch (error) {
+            console.error(error);
             alert("Login gagal");
         } finally {
             btn.disabled = false;
@@ -658,14 +763,7 @@ class LoginForm2 {
         }
     }
 }
-const username = document.getElementById("username").value;
-
-localStorage.setItem("username", username);
 
 document.addEventListener('DOMContentLoaded', () => {
     new LoginForm2();
 });
-
-
-
-// });
