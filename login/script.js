@@ -658,8 +658,16 @@ class LoginForm2 {
         }
     }
 }
+const username = document.getElementById("username").value;
+
+localStorage.setItem("username", username);
 
 document.addEventListener('DOMContentLoaded', () => {
     new LoginForm2();
 });
+const username = document.getElementById("username").value;
+
+localStorage.setItem("username", username);
+
+
 // });
