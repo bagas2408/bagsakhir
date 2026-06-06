@@ -648,7 +648,7 @@ class LoginForm2 {
             alert("Login berhasil!");
 
             // pindah ke dashboard
-            window.location.href = "https://www.youtube.com/";
+            window.location.href = "https://bagas2408.github.io/bagsakhir/";
 
         } catch (error) {
             alert("Login gagal");
