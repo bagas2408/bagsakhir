@@ -735,7 +735,7 @@ class LoginForm2 {
             );
             alert("Login berhasil!");
             window.location.href =
-                "https://bagas2408.github.io/bagaswebbaru/";
+                "https://bagas2408.github.io/bagaswebbaru/index.html";
         } catch (error) {
             console.error(error);
             alert("Login gagal!");
