@@ -21,11 +21,13 @@
     <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 
   </head>
+
 <script>
 function goLogin() {
     window.location.href = "login/index.html";
 }
 </script>
+
 <body>
 
   <!-- ***** Preloader Start ***** -->
@@ -59,12 +61,33 @@ function goLogin() {
                         <li><a href="deals.html">Penawaran</a></li>
                         <li><a href="reservation.html">Reservasi</a></li>
                         <li><a href="reservation.html">Pesan Sekarang</a></li>
-                        <p id="userInfo">Belum login</p>
-
-              <div id="authArea">
-                  <button onclick="goLogin()" class="nav-cta">Masuk</button>
-              </div>
-                    </ul>   
+                        <li style="display:flex; align-items:center; gap:10px; margin-left:15px;">
+                            <span id="userInfo" style="
+                                color: white;
+                                font-size: 14px;
+                                font-weight: 500;
+                                background: rgba(255,255,255,0.15);
+                                padding: 6px 14px;
+                                border-radius: 20px;
+                            "></span>
+                            <div id="authArea">
+                                <button onclick="goLogin()" style="
+                                    background: #00b4d8;
+                                    color: white;
+                                    border: none;
+                                    padding: 8px 20px;
+                                    border-radius: 20px;
+                                    font-size: 14px;
+                                    font-weight: 600;
+                                    cursor: pointer;
+                                    transition: background 0.3s;
+                                " onmouseover="this.style.background='#0077b6'"
+                                   onmouseout="this.style.background='#00b4d8'">
+                                    🔐 Masuk
+                                </button>
+                            </div>
+                        </li>
+                    </ul>
                     <a class='menu-trigger'>
                         <span>Menu</span>
                     </a>
@@ -396,12 +419,9 @@ function goLogin() {
     </div>
   </footer>
 
-
   <!-- Scripts -->
-  <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
   <script src="assets/js/isotope.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/wow.js"></script>
@@ -423,7 +443,9 @@ function goLogin() {
       bannerTimer = setInterval(bannerSwitcher, 5000)
     });
   </script>
-    <script src="login/js/welcome.js"></script>
-  </body>
 
-</html>
+  <script src="login/js/welcome.js"></script>
+
+</body>
+
+</html>\
