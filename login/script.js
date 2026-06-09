@@ -677,99 +677,74 @@ class LoginForm2 {
         this.form = document.getElementById("loginForm");
         this.emailInput = document.getElementById("email");
         this.passwordInput = document.getElementById("password");
-
         this.init();
     }
-
     init() {
         this.form.addEventListener("submit", (e) => {
             e.preventDefault();
             this.login();
         });
     }
-
     showError(element, message) {
         const errorElement = document.getElementById(
             element.id + "Error"
         );
-
         if (errorElement) {
             errorElement.textContent = message;
         }
-
         element.style.borderColor = "red";
     }
-
     clearError(element) {
         const errorElement = document.getElementById(
             element.id + "Error"
         );
-
         if (errorElement) {
             errorElement.textContent = "";
         }
-
         element.style.borderColor = "";
     }
-
     validate() {
         let valid = true;
-
         const email = this.emailInput.value.trim();
         const password = this.passwordInput.value.trim();
-
         this.clearError(this.emailInput);
         this.clearError(this.passwordInput);
-
         if (!email) {
-            this.showError(this.emailInput, "Email wajib diisi");
+            this.showError(this.emailInput, "Pengguna wajib diisi");
             valid = false;
         }
-
         if (!password) {
-            this.showError(this.passwordInput, "Password wajib diisi");
+            this.showError(this.passwordInput, "Kata sandi wajib diisi");
             valid = false;
         }
-
         return valid;
     }
-
     async login() {
         if (!this.validate()) return;
-
         const btn = document.querySelector(".login-btn");
         const btnText = document.querySelector(".btn-text");
-
         btn.disabled = true;
-        btnText.textContent = "Loading...";
-
+        btnText.textContent = "Memuat...";
         try {
             await new Promise((resolve) =>
                 setTimeout(resolve, 1000)
             );
-
-            // Simpan email ke localStorage
             localStorage.setItem(
                 "username",
                 this.emailInput.value.trim()
             );
-
             alert("Login berhasil!");
-
-            // Ganti dengan URL dashboard kamu
             window.location.href =
                 "https://bagas2408.github.io/bagaswebbaru/";
-
         } catch (error) {
             console.error(error);
             alert("Login gagal!");
         } finally {
             btn.disabled = false;
-            btnText.textContent = "Sign In";
+            btnText.textContent = "Masuk";
         }
     }
 }
-
 document.addEventListener("DOMContentLoaded", () => {
     new LoginForm2();
 });
