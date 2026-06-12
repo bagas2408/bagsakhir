@@ -1,311 +1,454 @@
-<!DOCTYPE html>
-<html lang="id">
-
-  <head>
-
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-
-    <title>WoOx Travel - Penawaran Spesial</title>
-
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <link rel="stylesheet" href="assets/css/fontawesome.css">
-    <link rel="stylesheet" href="assets/css/templatemo-woox-travel.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-    <link rel="stylesheet" href="assets/css/animate.css">
-    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
-</head>
-
-<body>
-
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-    </div>
-  </div>
-  <header class="header-area header-sticky">
-    <div class="container">
-        <div class="row">
-            <div class="col-12">
-                <nav class="main-nav">
-                    <a href="index.html" class="logo">
-                        <img src="assets/images/logo.png" alt="">
-                    </a>
-                    <ul class="nav">
-                        <li><a href="index.html">Beranda</a></li>
-                        <li><a href="about.html">Tentang Kami</a></li>
-                        <li><a href="deals.html" class="active">Penawaran</a></li>
-                        <li><a href="reservation.html">Reservasi</a></li>
-                        <li><a href="reservation.html">Pesan Sekarang</a></li>
-                    </ul>   
-                    <a class='menu-trigger'>
-                        <span>Menu</span>
-                    </a>
-                    </nav>
-            </div>
-        </div>
-    </div>
-  </header>
-  <div class="page-heading">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <h4>Temukan Penawaran Mingguan Kami</h4>
-          <h2>Harga Luar Biasa &amp; Lainnya</h2>
-          <div class="border-button"><a href="about.html">Jelajahi Lebih Lanjut</a></div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="search-form">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <form id="search-form" name="gs" method="submit" role="search" action="#">
-            <div class="row">
-              <div class="col-lg-2">
-                <h4>Urutkan Berdasarkan:</h4>
-              </div>
-              <div class="col-lg-4">
-                  <fieldset>
-                      <select name="Location" class="form-select" aria-label="Default select example" id="chooseLocation" onChange="this.form.click()">
-                          <option selected>Destinasi</option>
-                          <option type="checkbox" name="option1" value="Italy">Italia</option>
-                          <option value="France">Prancis</option>
-                          <option value="Switzerland">Swiss</option>
-                          <option value="Thailand">Thailand</option>
-                          <option value="Australia">Australia</option>
-                          <option value="India">India</option>
-                          <option value="Indonesia">Indonesia</option>
-                          <option value="Malaysia">Malaysia</option>
-                          <option value="Singapore">Singapura</option>
-                      </select>
-                  </fieldset>
-              </div>
-              <div class="col-lg-4">
-                  <fieldset>
-                      <select name="Price" class="form-select" aria-label="Default select example" id="choosePrice" onChange="this.form.click()">
-                          <option selected>Rentang Harga</option>
-                          <option value="100">$100 - $250</option>
-                          <option value="250">$250 - $500</option>
-                          <option value="500">$500 - $1,000</option>
-                          <option value="1000">$1,000 - $2,500</option>
-                          <option value="2500+">$2,500+</option>
-                      </select>
-                  </fieldset>
-              </div>
-              <div class="col-lg-2">                        
-                  <fieldset>
-                      <button class="border-button">Cari Hasil</button>
-                  </fieldset>
-              </div>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="amazing-deals">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 offset-lg-3">
-          <div class="section-heading text-center">
-            <h2>Penawaran Mingguan Terbaik di Setiap Kota</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore.</p>
-          </div>
-        </div>
-        <div class="col-lg-6 col-sm-6">
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="image">
-                  <img src="assets/images/deals-01.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6 align-self-center">
-                <div class="content">
-                  <span class="info">*Penawaran Terbatas Hari Ini</span>
-                  <h4>Glasgow City Lorem</h4>
-                  <div class="row">
-                    <div class="col-6">
-                      <i class="fa fa-clock"></i>
-                      <span class="list">5 Hari</span>
-                    </div>
-                    <div class="col-6">
-                      <i class="fa fa-map"></i>
-                      <span class="list">Tempat Harian</span>
-                    </div>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet dire consectetur adipiscing elit.</p>
-                  <div class="main-button">
-                    <a href="reservation.html">Buat Reservasi</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-sm-6">
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="image">
-                  <img src="assets/images/deals-02.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6 align-self-center">
-                <div class="content">
-                  <span class="info">*Hanya Hari Ini & Besok</span>
-                  <h4>Venezia Italy Ipsum</h4>
-                  <div class="row">
-                    <div class="col-6">
-                      <i class="fa fa-clock"></i>
-                      <span class="list">5 Hari</span>
-                    </div>
-                    <div class="col-6">
-                      <i class="fa fa-map"></i>
-                      <span class="list">Tempat Harian</span>
-                    </div>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet dire consectetur adipiscing elit.</p>
-                  <div class="main-button">
-                    <a href="reservation.html">Buat Reservasi</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-sm-6">
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="image">
-                  <img src="assets/images/deals-03.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6 align-self-center">
-                <div class="content">
-                  <span class="info">**Belum Ditentukan</span>
-                  <h4>Glasgow City Lorem</h4>
-                  <div class="row">
-                    <div class="col-6">
-                      <i class="fa fa-clock"></i>
-                      <span class="list">5 Hari</span>
-                    </div>
-                    <div class="col-6">
-                      <i class="fa fa-map"></i>
-                      <span class="list">Tempat Harian</span>
-                    </div>
-                  </div>
-                  <p>Lorem ipsum dolor sit amet dire consectetur adipiscing elit.</p>
-                  <div class="main-button">
-                    <a href="reservation.html">Buat Reservasi</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6 col-sm-6">
-          <div class="item">
-            <div class="row">
-              <div class="col-lg-6">
-                <div class="image">
-                  <img src="assets/images/deals-04.jpg" alt="">
-                </div>
-              </div>
-              <div class="col-lg-6 align-self-center">
-                <div class="content">
-                  <span class="info">*Penawaran Hingga 24 Maret</span>
-                  <h4>Glasgow City Lorem</h4>
-                  <div class="row">
-                    <div class="col-6">
-                      <i class="fa fa-clock"></i>
-                      <span class="list">5 Hari</span>
-                    </div>
-                    <div class="col-6">
-                      <i class="fa fa-map"></i>
-                      <span class="list">Tempat Harian</span>
-                    </div>
-                  </div>
-                  <p>Template CSS gratis ini disediakan oleh situs web Template Mo.</p>
-                  <div class="main-button">
-                    <a href="reservation.html">Buat Reservasi</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <ul class="page-numbers">
-            <li><a href="#"><i class="fa fa-arrow-left"></i></a></li>
-            <li><a href="#">1</a></li>
-            <li class="active"><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#"><i class="fa fa-arrow-right"></i></a></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <div class="call-to-action">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8">
-          <h2>Apakah Anda Berencana Liburan?</h2>
-          <h4>Buat Reservasi dengan Mengeklik Tombol</h4>
-        </div>
-        <div class="col-lg-4">
-          <div class="border-button">
-            <a href="reservation.html">Pesan Sekarang</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <footer>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <p>Hak Cipta © 2036 Perusahaan <a href="#">WoOx Travel</a>. Hak cipta dilindungi undang-undang. 
-          <br>Desain: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-
-  <script src="assets/js/isotope.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/wow.js"></script>
-  <script src="assets/js/tabs.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
-
-  <script>
-    $(".option").click(function(){
-      $(".option").removeClass("active");
-      $(this).addClass("active"); 
-    });
-  </script>
-
-  </body>
-
-</html>
+<!DOCTYPE html> 
+<html lang="id"> 
+ 
+  <head> 
+ 
+    <meta charset="utf-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> 
+ 
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet"> 
+ 
+    <title>WoOx Travel - Tentang Kami</title> 
+ 
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> 
+ 
+    <link rel="stylesheet" href="assets/css/fontawesome.css"> 
+    <link rel="stylesheet" href="assets/css/templatemo-woox-travel.css"> 
+    <link rel="stylesheet" href="assets/css/owl.css"> 
+    <link rel="stylesheet" href="assets/css/animate.css"> 
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/> 
+  </head> 
+ 
+<body> 
+ 
+  <div id="js-preloader" class="js-preloader"> 
+    <div class="preloader-inner"> 
+      <span class="dot"></span> 
+      <div class="dots"> 
+        <span></span> 
+        <span></span> 
+        <span></span> 
+      </div> 
+    </div> 
+  </div> 
+  <header class="header-area header-sticky"> 
+    <div class="container"> 
+        <div class="row"> 
+            <div class="col-12"> 
+                <nav class="main-nav"> 
+                    <a href="index.html" class="logo"> 
+                        <img src="assets/images/logo.png" alt=""> 
+                    </a> 
+                    <ul class="nav"> 
+                        <li><a href="index.html">Beranda</a></li> 
+                        <li><a href="about.html" class="active">Tentang</a></li> 
+                        <li><a href="deals.html">Penawaran</a></li> 
+                        <li><a href="reservation.html">Reservasi</a></li> 
+                        <li><a href="reservation.html">Pesan Sekarang</a></li> 
+                    </ul>    
+                    <a class='menu-trigger'> 
+                        <span>Menu</span> 
+                    </a> 
+                    </nav> 
+            </div> 
+        </div> 
+    </div> 
+  </header> 
+  <div class="about-main-content"> 
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-lg-12"> 
+          <div class="content"> 
+            <div class="blur-bg"></div> 
+            <h4>JELAJAHI NEGARA KAMI</h4> 
+            <div class="line-dec"></div> 
+            <h2>Selamat Datang di Karibia</h2> 
+            <p>"Dunia Terlalu Indah untuk Dilewatkan. Pesan Tiket Petualanganmu Sekarang!"</p> 
+            <div class="main-button"> 
+              <a href="reservation.html">Temukan Lebih Banyak</a> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+  <div class="cities-town"> 
+    <div class="container"> 
+      <div class="row"> 
+        <div class="slider-content"> 
+          <div class="row"> 
+            <div class="col-lg-12"> 
+              <h2>Kota &amp; Daerah <em>Karibia</em></h2> 
+            </div> 
+            <div class="col-lg-12"> 
+              <div class="owl-cites-town owl-carousel"> 
+                <div class="item"> 
+                  <div class="thumb"> 
+                    <img src="assets/images/cities-01.jpg" alt=""> 
+                    <h4>Havana</h4> 
+                  </div> 
+                </div> 
+                <div class="item"> 
+                  <div class="thumb"> 
+                    <img src="assets/images/cities-02.jpg" alt=""> 
+                    <h4>Kingston</h4> 
+                  </div> 
+                </div> 
+                <div class="item"> 
+                  <div class="thumb"> 
+                    <img src="assets/images/cities-03.jpg" alt=""> 
+                    <h4>George Town</h4> 
+                  </div> 
+                </div> 
+                <div class="item"> 
+                  <div class="thumb"> 
+                    <img src="assets/images/cities-04.jpg" alt=""> 
+                    <h4>Santo Domingo</h4> 
+                  </div> 
+                </div> 
+                <div class="item"> 
+                  <div class="thumb"> 
+                    <img src="assets/images/cities-01.jpg" alt=""> 
+                    <h4>Havana</h4> 
+                  </div> 
+                </div> 
+                <div class="item"> 
+                  <div class="thumb"> 
+                    <img src="assets/images/cities-02.jpg" alt=""> 
+                    <h4>Kingston</h4> 
+                  </div> 
+                </div> 
+                <div class="item"> 
+                  <div class="thumb"> 
+                    <img src="assets/images/cities-03.jpg" alt=""> 
+                    <h4>George Town</h4> 
+                  </div> 
+                </div> 
+                <div class="item"> 
+                  <div class="thumb"> 
+                    <img src="assets/images/cities-04.jpg" alt=""> 
+                    <h4>Santo Domingo</h4> 
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+ 
+  <div class="weekly-offers"> 
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-lg-6 offset-lg-3"> 
+          <div class="section-heading text-center"> 
+            <h2>Penawaran Mingguan Terbaik di Setiap Kota</h2> 
+            <p>"Satu Klik Menuju Liburan Tak Terlupakan. Ke Mana Kita Pergi Selanjutnya?"</p> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+    <div class="container-fluid"> 
+      <div class="row"> 
+        <div class="col-lg-12"> 
+          <div class="owl-weekly-offers owl-carousel"> 
+            <div class="item"> 
+              <div class="thumb"> 
+                <img src="assets/images/offers-01.jpg" alt=""> 
+                <div class="text"> 
+                  <h4>Havana<br><span><i class="fa fa-users"></i> 234 Check In</span></h4> 
+                  <h6>$420<br><span>/orang</span></h6> 
+                  <div class="line-dec"></div> 
+                  <ul> 
+                    <li>Paket Termasuk:</li> 
+                    <li><i class="fa fa-taxi"></i> Perjalanan 5 Hari + Hotel</li> 
+                    <li><i class="fa fa-plane"></i> Tiket Pesawat Termasuk</li> 
+                    <li><i class="fa fa-building"></i> Kunjungan Tempat Wisata Harian</li> 
+                  </ul> 
+                  <div class="main-button"> 
+                    <a href="reservation.html">Buat Reservasi</a> 
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="item"> 
+              <div class="thumb"> 
+                <img src="assets/images/offers-02.jpg" alt=""> 
+                <div class="text"> 
+                  <h4>Kingston<br><span><i class="fa fa-users"></i> 234 Check In</span></h4> 
+                  <h6>$420<br><span>/orang</span></h6> 
+                  <div class="line-dec"></div> 
+                  <ul> 
+                    <li>Paket Termasuk:</li> 
+                    <li><i class="fa fa-taxi"></i> Perjalanan 5 Hari + Hotel</li> 
+                    <li><i class="fa fa-plane"></i> Tiket Pesawat Termasuk</li> 
+                    <li><i class="fa fa-building"></i> Kunjungan Tempat Wisata Harian</li> 
+                  </ul> 
+                  <div class="main-button"> 
+                    <a href="reservation.html">Buat Reservasi</a> 
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="item"> 
+              <div class="thumb"> 
+                <img src="assets/images/offers-03.jpg" alt=""> 
+                <div class="text"> 
+                  <h4>George Town<br><span><i class="fa fa-users"></i> 234 Check In</span></h4> 
+                  <h6>$420<br><span>/orang</span></h6> 
+                  <div class="line-dec"></div> 
+                  <ul> 
+                    <li>Paket Termasuk:</li> 
+                    <li><i class="fa fa-taxi"></i> Perjalanan 5 Hari + Hotel</li> 
+                    <li><i class="fa fa-plane"></i> Tiket Pesawat Termasuk</li> 
+                    <li><i class="fa fa-building"></i> Kunjungan Tempat Wisata Harian</li> 
+                  </ul> 
+                  <div class="main-button"> 
+                    <a href="reservation.html">Buat Reservasi</a> 
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="item"> 
+              <div class="thumb"> 
+                <img src="assets/images/offers-01.jpg" alt=""> 
+                <div class="text"> 
+                  <h4>Havana<br><span><i class="fa fa-users"></i> 234 Check In</span></h4> 
+                  <h6>$420<br><span>/orang</span></h6> 
+                  <div class="line-dec"></div> 
+                  <ul> 
+                    <li>Paket Termasuk:</li> 
+                    <li><i class="fa fa-taxi"></i> Perjalanan 5 Hari + Hotel</li> 
+                    <li><i class="fa fa-plane"></i> Tiket Pesawat Termasuk</li> 
+                    <li><i class="fa fa-building"></i> Kunjungan Tempat Wisata Harian</li> 
+                  </ul> 
+                  <div class="main-button"> 
+                    <a href="reservation.html">Buat Reservasi</a> 
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="item"> 
+              <div class="thumb"> 
+                <img src="assets/images/offers-02.jpg" alt=""> 
+                <div class="text"> 
+                  <h4>Kingston<br><span><i class="fa fa-users"></i> 234 Check In</span></h4> 
+                  <h6>$420<br><span>/orang</span></h6> 
+                  <div class="line-dec"></div> 
+                  <ul> 
+                    <li>Paket Termasuk:</li> 
+                    <li><i class="fa fa-taxi"></i> Perjalanan 5 Hari + Hotel</li> 
+                    <li><i class="fa fa-plane"></i> Tiket Pesawat Termasuk</li> 
+                    <li><i class="fa fa-building"></i> Kunjungan Tempat Wisata Harian</li> 
+                  </ul> 
+                  <div class="main-button"> 
+                    <a href="reservation.html">Buat Reservasi</a> 
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+            <div class="item"> 
+              <div class="thumb"> 
+                <img src="assets/images/offers-03.jpg" alt=""> 
+                <div class="text"> 
+                  <h4>George Town<br><span><i class="fa fa-users"></i> 234 Check In</span></h4> 
+                  <h6>$420<br><span>/orang</span></h6> 
+                  <div class="line-dec"></div> 
+                  <ul> 
+                    <li>Paket Termasuk:</li> 
+                    <li><i class="fa fa-taxi"></i> Perjalanan 5 Hari + Hotel</li> 
+                    <li><i class="fa fa-plane"></i> Tiket Pesawat Termasuk</li> 
+                    <li><i class="fa fa-building"></i> Kunjungan Tempat Wisata Harian</li> 
+                  </ul> 
+                  <div class="main-button"> 
+                    <a href="reservation.html">Buat Reservasi</a> 
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+ 
+  <div class="more-about"> 
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-lg-6 align-self-center"> 
+          <div class="left-image"> 
+            <img src="assets/images/about-left-image.jpg" alt=""> 
+          </div> 
+        </div> 
+        <div class="col-lg-6"> 
+          <div class="section-heading"> 
+            <h2>Temukan Lebih Banyak Tentang Negara Kami</h2> 
+            <p>"Jangan Hanya Menatap Layar. Mulai Kemas Koper dan Jelajahi Negara Impianmu Bersama Layanan Tepercaya Kami!"</p> 
+          </div> 
+          <div class="row"> 
+            <div class="col-lg-6"> 
+              <div class="info-item"> 
+                <h4>150.640 +</h4> 
+                <span>Total Tamu Per Tahun</span> 
+              </div> 
+            </div> 
+            <div class="col-lg-6"> 
+              <div class="info-item"> 
+                <h4>175.000+</h4> 
+                <span>Akomodasi Menakjubkan</span> 
+              </div> 
+            </div> 
+            <div class="col-lg-12"> 
+              <div class="info-item"> 
+                <div class="row"> 
+                  <div class="col-lg-6"> 
+                    <h4>12.560+</h4> 
+                    <span>Tempat Wisata Menakjubkan</span> 
+                  </div> 
+                  <div class="col-lg-6"> 
+                    <h4>240.580+</h4> 
+                    <span>Check-in Berbeda Per Tahun</span> 
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+          <p>"Penawaran Terbatas! Dapatkan Diskon Spesial untuk Penerbangan dan Pilihan Hotel Terbaik Minggu Ini."</p> 
+          <div class="main-button"> 
+            <a href="reservation.html">Temukan Lebih Banyak</a> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+ 
+  <div class="best-locations"> 
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-lg-6 offset-lg-3"> 
+          <div class="section-heading text-center"> 
+            <h2>Lokasi Terbaik di Karibia</h2> 
+            <p>"Rencanakan Liburan Tanpa Ribet. Cek Jadwal, Pilih Negara Eksotis, dan Amankan Slot Anda Sekarang."</p> 
+          </div> 
+        </div> 
+        <div class="col-lg-8 offset-lg-2"> 
+          <div class="options"> 
+            <div class="option active" style="--optionBackground:url(https://buttoncreatives.com/html/woox/assets/images/best-01.jpg);"> 
+               <div class="shadow"></div> 
+               <div class="label"> 
+                  <div class="icon"> 
+                     <i class="fas fa-expand"></i> 
+                  </div> 
+                  <div class="info"> 
+                     <div class="main">Havana</div> 
+                     <div class="sub">Populasi: 2 Juta</div> 
+                  </div> 
+               </div> 
+            </div> 
+            <div class="option" style="--optionBackground:url(https://buttoncreatives.com/html/woox/assets/images/best-02.jpg);"> 
+               <div class="shadow"></div> 
+               <div class="label"> 
+                  <div class="icon"> 
+                    <i class="fas fa-expand"></i> 
+                  </div> 
+                  <div class="info"> 
+                     <div class="main">Kingston</div> 
+                     <div class="sub">Populasi: 3,5 Juta</div> 
+                  </div> 
+               </div> 
+            </div> 
+            <div class="option" style="--optionBackground:url(https://buttoncreatives.com/html/woox/assets/images/best-03.jpg);"> 
+               <div class="shadow"></div> 
+               <div class="label"> 
+                  <div class="icon"> 
+                    <i class="fas fa-expand"></i> 
+                  </div> 
+                  <div class="info"> 
+                     <div class="main">London</div> 
+                     <div class="sub">Populasi: 4,1 Juta</div> 
+                  </div> 
+               </div> 
+            </div> 
+            <div class="option" style="--optionBackground:url(https://buttoncreatives.com/html/woox/assets/images/best-04.jpg);"> 
+               <div class="shadow"></div> 
+               <div class="label"> 
+                  <div class="icon"> 
+                    <i class="fas fa-expand"></i> 
+                  </div> 
+                  <div class="info"> 
+                     <div class="main">Pristina</div> 
+                     <div class="sub">Populasi: 520 Ribu</div> 
+                  </div> 
+               </div> 
+            </div> 
+            <div class="option" style="--optionBackground:url(https://buttoncreatives.com/html/woox/assets/images/best-05.jpg);"> 
+               <div class="shadow"></div> 
+               <div class="label"> 
+                  <div class="icon"> 
+                    <i class="fas fa-expand"></i> 
+                  </div> 
+                  <div class="info"> 
+                     <div class="main">Paris</div> 
+                     <div class="sub">Populasi: 3 Juta</div> 
+                  </div> 
+               </div> 
+            </div> 
+         </div> 
+        </div> 
+        <div class="col-lg-12"> 
+          <div class="main-button text-center"> 
+            <a href="deals.html">Temukan Semua Tempat</a> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+ 
+  <div class="call-to-action"> 
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-lg-8"> 
+          <h2>Apakah Anda Ingin Bepergian?</h2> 
+          <h4>Buat Reservasi dengan Mengklik Tombol</h4> 
+        </div> 
+        <div class="col-lg-4"> 
+          <div class="border-button"> 
+            <a href="reservation.html">Pesan Sekarang</a> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+ 
+  <footer> 
+    <div class="container"> 
+      <div class="row"> 
+        <div class="col-lg-12"> 
+          <p>Hak Cipta © 2036 <a href="#">WoOx Travel</a> Company. Seluruh hak dilindungi.  
+          <br>Desain: <a href="https://templatemo.com" target="_blank" title="free CSS templates">TemplateMo</a></p> 
+        </div> 
+      </div> 
+    </div> 
+  </footer> 
+ 
+  <script src="vendor/jquery/jquery.min.js"></script> 
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script> 
+ 
+  <script src="assets/js/isotope.min.js"></script> 
+  <script src="assets/js/owl-carousel.js"></script> 
+  <script src="assets/js/wow.js"></script> 
+  <script src="assets/js/tabs.js"></script> 
+  <script src="assets/js/popup.js"></script> 
+  <script src="assets/js/custom.js"></script> 
+ 
+  <script> 
+    $(".option").click(function(){ 
+      $(".option").removeClass("active"); 
+      $(this).addClass("active");  
+    }); 
+  </script> 
+ 
+  </body> 
+ 
+  </html>
